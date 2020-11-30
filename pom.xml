@@ -38,7 +38,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <version.arquillian-cube>1.18.X</version.arquillian-cube>
+    <version.arquillian-cube>1.18.2</version.arquillian-cube>
     <version.awaitility>4.0.3</version.awaitility>
     <version.fabric8-openshift-client>4.13.0</version.fabric8-openshift-client>
     <version.jackson-dataformat-yaml>2.10.4.redhat-00001</version.jackson-dataformat-yaml> <!-- should match Jackson version in Thorntail -->
@@ -67,13 +67,6 @@
         <version>${version.thorntail}</version>
         <type>pom</type>
         <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.arquillian.cube</groupId>
-        <artifactId>arquillian-cube-bom</artifactId>
-        <version>${version.arquillian-cube}</version>
-        <scope>import</scope>
-        <type>pom</type>
       </dependency>
       <!-- Fabric8 OpenShift Client brings in too new Jackson version -->
       <dependency>
@@ -122,6 +115,7 @@
     <dependency>
       <groupId>org.arquillian.cube</groupId>
       <artifactId>arquillian-cube-openshift</artifactId>
+      <version>${version.arquillian-cube}</version>
       <scope>test</scope>
       <exclusions>
         <exclusion>
